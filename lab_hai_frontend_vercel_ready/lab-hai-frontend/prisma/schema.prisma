@@ -1,0 +1,31 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+generator client {
+  provider = "prisma-client-js"
+}
+model Report {
+  hash        String   @id
+  patientId   String?
+  filename    String
+  pdfUrl      String?
+  signedPdfUrl String?
+  generatedAt DateTime
+  model       String?
+  signatures  Signature[]
+}
+model Signature {
+  id          Int     @id @default(autoincrement())
+  hash        String
+  clinicianName String
+  email       String
+  signedAt    DateTime @default(now())
+  report      Report?  @relation(fields: [hash], references: [hash])
+}
+model OTP {
+  hash    String @id
+  otp     String
+  email   String
+  createdAt DateTime @default(now())
+}

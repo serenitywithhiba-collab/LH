@@ -1,0 +1,1 @@
+export function ReportCard() { return (<div className="space-y-4"><div className="p-4 bg-hibaBlack text-hibaWhite rounded-xl shadow"><h3 className="font-bold">Q1 Report</h3><p className="text-hibaYellow">Improvement detected in 65% of cases.</p></div></div>) }

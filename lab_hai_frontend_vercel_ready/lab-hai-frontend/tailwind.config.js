@@ -1,0 +1,1 @@
+module.exports = { content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'], theme: { extend: { colors: { hibaRed: '#D32F2F', hibaBlack: '#000000', hibaWhite: '#FFFFFF', hibaYellow: '#FFEB3B' } } }, plugins: [] }

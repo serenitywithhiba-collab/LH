@@ -1,0 +1,3 @@
+import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts'
+const data = [{ month: 'Jan', value: 40 },{ month: 'Feb', value: 55 }]
+export function ChartSection() { return (<div style={{width:'100%', height:300}}><ResponsiveContainer width='100%' height={300}><LineChart data={data}><Line type='monotone' dataKey='value' stroke='#D32F2F' strokeWidth={3} dot={{r:6, fill:'#FFEB3B', stroke:'#000'}} /><CartesianGrid stroke='#ccc' /><XAxis dataKey='month' stroke='#000' /><YAxis stroke='#000' /><Tooltip contentStyle={{ backgroundColor:'#fff', borderColor:'#D32F2F' }} /></LineChart></ResponsiveContainer></div>) }
